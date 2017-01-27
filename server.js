@@ -4,6 +4,7 @@ var app = express();
 var ip = "x-forwarded-for";
 var language = "accept-language";
 var software = "user-agent";
+var port = process.env.PORT || 8000;
 
 app.get('/', function (req, res) {
     res.status(200);
@@ -17,4 +18,4 @@ app.get('/', function (req, res) {
     );
 });
 
-app.listen(8080);
+app.listen(port);
